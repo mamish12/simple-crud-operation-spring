@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.excellence.simpleproductcrudoperation.dto.Product;
@@ -19,6 +20,12 @@ public class ProductController {
 	
 	@Autowired
 	ProductService productService;
+	
+	@RequestMapping(value="/getMyData")
+	public String getData()
+	{
+		return "Good Morning India";
+	}
 	
 	/*
 	 * insert
